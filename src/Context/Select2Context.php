@@ -108,6 +108,8 @@ class Select2Context extends BaseContext
             $select2Input->setValue($value);
         }
 
+        // need a little delay for jquery to become active
+        $this->getSession()->wait(2000);
         $this->getSession()->wait(10000, '(0 === jQuery.active)');
     }
 
