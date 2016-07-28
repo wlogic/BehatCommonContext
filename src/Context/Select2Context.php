@@ -127,6 +127,7 @@ class Select2Context extends BaseContext
         foreach ($chosenResults as $result) {
             if ($result->getText() == $value) {
                 $result->click();
+                $this->getSession()->wait(2000);
                 return;
             }
         }
